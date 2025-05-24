@@ -1,0 +1,374 @@
+@charset "utf-8";
+
+/* ▼ 全体 start ▼ */
+body {
+  margin: 0;
+  background: black;
+  color: white;
+
+  font-family: "Shippori Mincho", serif;
+  font-weight: 400;
+  font-style: normal;
+
+}
+
+h1 {
+  margin: 0;
+}
+
+h2 {
+  margin: 0;
+  font-size: 2.4rem;
+  font-weight: normal;
+  text-align: center;
+}
+
+h3 {
+  margin: 0;
+  font-weight: normal;
+  font-size: 1.6rem;
+}
+
+p {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+video {
+  vertical-align: bottom;
+}
+
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #9c9c9c;
+  transition: opacity 1s, transform 1s;
+}
+
+.loading video {
+  width: 100%;
+  height: 100vh;
+  object-fit: contain;
+
+}
+
+/* ▲ 全体 end ▲ */
+
+/* ▼ header start ▼ */
+.header {
+  width: 100%;
+  height: 100vh;
+}
+
+.header h1 {
+  /* 表示されないようにしている*/
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.header video {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+/* ▲ header end ▲ */
+
+/* ▼ introduction start ▼ */
+.introduction {
+  padding: 2rem ;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.introduction-item {
+  margin: 2rem auto 0;
+  display: flex;
+  border: 2px solid white;
+  padding: 2rem;
+  gap: 1rem;
+  align-items: center;
+}
+
+.introduction-item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.introduction-item img {
+  width: 50%;
+  height: 12rem;
+}
+
+.introduction-text {
+  margin: .6rem 0;
+  box-shadow: 4px 4px 4px white;
+  background: rgba(255, 255, 255, .9);
+  transform: translateX(-50px);
+  color: black;
+  padding: 1rem;
+}
+
+.introduction-text.reverse {
+  transform: translateX(50px);
+}
+
+.introduction-text h3 {
+  text-align: center;
+}
+
+.introduction-text p {
+  margin-top: 1rem;
+}
+
+@media (max-width: 599px) {
+  .introduction-item {
+    display: block;
+  }
+
+  .introduction-item img {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .introduction-text {
+    margin: 1rem 0;
+    box-shadow: none;
+    background: white;
+    transform: translateX(0);
+  }
+
+  .introduction-text.reverse {
+  transform: none;
+}
+}
+
+/* ▲ introduction end ▲ */
+/* ▼ menu start ▼ */
+.menu {
+  padding: 2rem;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.menu-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 2rem auto 0;
+  gap: 2rem;
+}
+
+.menu-item {
+  border: 2px solid white;
+  padding: 2rem;
+}
+
+.menu-item img {
+  width: 100%;
+  height: 14rem;
+}
+
+.menu-item h3 {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.menu-item p {
+  margin-top: .6rem;
+}
+
+@media (max-width: 599px) {
+  .menu .menu-list {
+    display: block;
+    gap: 0;
+  }
+
+  .menu .menu-item {
+    margin-top: 2rem;
+  }
+}
+
+/* ▲ menu end ▲ */
+
+/* ▼ campaign start ▼ */
+.campaign {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.campaign-list {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.campaign-list p {
+  margin-top: 1rem;
+}
+
+.campaign-down {
+  animation: 1s campaign-down infinite ease;
+  font-size: 2rem;
+  font-weight: bold;
+  color: yellow;
+  transform: translateY(-5px);
+}
+
+@keyframes campaign-down {
+  0% {
+    transform: translateY(-5px);
+  }
+
+  50% {
+    transform: translateY(5px);
+
+  }
+
+  100% {
+    transform: translateY(-5px);
+  }
+
+}
+
+/* ▲ campaign end ▲ */
+
+/* ▼ form start ▼ */
+input,
+select {
+  width: 100%;
+  margin-top: 1rem;
+  font-size: 1.4rem;
+  padding: 0.4rem 0;
+  border-radius: 8px;
+}
+
+label {
+  font-size: 1.4rem;
+}
+
+.form {
+  padding: 2rem;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.form-list {
+  margin-top: 2rem;
+}
+
+.form-btn {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.form-btn button {
+  font-size: 2rem;
+  padding: 0.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.form-btn button:hover {
+  opacity: 0.6;
+  transition: opacity 0.3s;
+}
+
+/* ▲ form end ▲ */
+
+/* ▼ footer start ▼ */
+.footer {
+  padding: 2rem;
+}
+
+.footer-note {
+  color: red;
+  text-align: center;
+  font-size: 2rem;
+  line-height: 1.6;
+}
+
+.footer h2 {
+  margin-top: 2rem;
+}
+
+.footer-sns {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.footer-sns a+a {
+  margin-left: 4rem;
+}
+
+.footer-sns a:hover {
+  opacity: 0.6;
+  transition: opacity 0.3s;
+}
+
+.footer-about {
+  margin-top: 4rem;
+}
+
+.footer-about ul {
+  display: flex;
+  text-align: right;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.footer-about li:hover {
+  opacity: .6;
+  transition: opacity .3s;
+}
+
+.footer small {
+  display: block;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.footer-sp {
+  display: none;
+}
+
+@media (max-width: 599px) {
+  .footer-note {
+    font-size: 1.4rem;
+  }
+
+
+}
+
+@media (max-width: 799px) {
+  .footer-pc {
+    display: none;
+
+  }
+
+  .footer-sp {
+    display: block;
+    font-size: 1.6rem;
+  }
+}
+
+/* ▲ footer end ▲ */
