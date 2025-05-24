@@ -61,6 +61,7 @@ video {
   bottom: 0;
   background: #9c9c9c;
   transition: opacity 1s, transform 1s;
+  z-index: 1000;
 }
 
 .loading video {
