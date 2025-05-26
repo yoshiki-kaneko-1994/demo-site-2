@@ -1,21 +1,4 @@
 "use strict";
-// ▼ loading start ▼
-{
-  const loading = document.querySelector('.loading');
-
-  // loadingの関数
-  function loadingStyle(element, opacity, pointerEvents) {
-    element.style.opacity = opacity;
-    element.style.pointerEvents = pointerEvents;
-  }
-
-  // loadが完了したらloadingが非表示
-  window.addEventListener('load', () => {
-    loadingStyle(loading, '0', 'none');
-  });
-}
-// ▲ loading end ▲
-
 // ▼ form start ▼
 {
   const form = document.querySelector('form');
